@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    image: node:18.19.0
+    container_name: app-server
+    volumes:
+      - ./:/var/www/html
+    working_dir: /var/www/html
+    ports:
+      - "5000:3000"
+    tty: true
